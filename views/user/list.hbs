@@ -1,0 +1,30 @@
+{{#if this.length}}
+<div>khong co du lieu</div>
+{{else}}
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">User</th>
+            <th scope="col">DOB</th>
+            <th scope="col">token</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each this.users}}
+        <tr>
+            <th scope="row">{{f_ID}}</th>
+            {{#if f_Permission}}
+            <td>admin</td>
+            {{else}}
+            <td>{{f_Username}}</td>
+            {{/if}}
+            <td>{{f_DOB}}</td>
+            <td>{{token}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{/if}}
